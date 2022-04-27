@@ -62,11 +62,11 @@
 				</div>
 				<div class="col-xs-10 text-right menu-1">
 					<ul>
-						<li class="active"><a href="index.html">Home</a></li>
-						<li><a href="#Events">Events</a></li>
-						<li><a href="#Story">Story</a></li>						
-						<li><a href="#Gallery">Gallery</a></li>	
-						<li><a href="#Contact">Contact</a></li>
+						<li class="active"><a href="wedding.html">Home</a></li>
+						<li><a class="smoothscroll" href="#Events">Events</a></li>
+						<li><a class="smoothscroll" href="#Story">Story</a></li>						
+						<li><a class="smoothscroll" href="#Gallery">Gallery</a></li>	
+						<li><a class="smoothscroll" href="#Contact">Contact</a></li>
 					</ul>
 				</div>
 			</div>
@@ -499,6 +499,20 @@
 	function myFunction() {
   alert("Thank you for joining with us");
 }
+		$('.smoothscroll').on('click', function (e) {
+	 	
+	 	e.preventDefault();
+
+   	var target = this.hash,
+    	$target = $(target);
+
+    	$('html, body').stop().animate({
+       	'scrollTop': $target.offset().top
+      }, 800, 'swing', function () {
+      	window.location.hash = target;
+      });
+
+  	});  
 </script>
 	</body>
 </html>
