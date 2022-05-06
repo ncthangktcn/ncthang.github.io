@@ -1843,10 +1843,6 @@ form label {
 .couple-half .CTbank img, .couple-half .KAbank img {
   width: 150px;
   height: 150px;
-  -webkit-border-radius: 50%;
-  -moz-border-radius: 50%;
-  -ms-border-radius: 50%;
-  border-radius: 50%;
 }
 .couple-half .CTbank {
   float: right;
